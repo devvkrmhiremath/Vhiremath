@@ -320,6 +320,9 @@ h1, h2, h3 {
   color: var(--ink-soft);
 }
 .schedule-items .sep { color: var(--ink-faint); margin: 0 8px; }
+.skills-note { margin: 14px 0 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faint); }
+.skills-note a { color: var(--ink-soft); }
+.skills-note a:hover { color: var(--accent); }
 
 .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag {
@@ -552,39 +555,15 @@ footer {
 </section>
 
 <section class="sheet reveal" id="skills">
-  <h2 class="eyebrow"><span class="idx">SHEET 03/06</span> — LEGEND / TECHNICAL SKILLS</h2>
+  <h2 class="eyebrow"><span class="idx">SHEET 03/06</span> — CURRENT STACK</h2>
   <div class="schedule">
     <div class="schedule-row">
       <div class="schedule-mark">01</div>
-      <div class="schedule-cat">Microsoft 365 &amp; Collaboration</div>
-      <div class="schedule-items">SharePoint Online<span class="sep">&middot;</span>Information Architecture<span class="sep">&middot;</span>Governance<span class="sep">&middot;</span>Microsoft Teams<span class="sep">&middot;</span>Teams App Extensibility<span class="sep">&middot;</span>Microsoft Graph API<span class="sep">&middot;</span>OneDrive for Business<span class="sep">&middot;</span>Exchange Online<span class="sep">&middot;</span>Power Apps<span class="sep">&middot;</span>Power Automate</div>
-    </div>
-    <div class="schedule-row">
-      <div class="schedule-mark">02</div>
-      <div class="schedule-cat">Azure Cloud &amp; AI Services</div>
-      <div class="schedule-items">Azure OpenAI (GPT‑4.1)<span class="sep">&middot;</span>Text Embeddings<span class="sep">&middot;</span>Prompt Engineering<span class="sep">&middot;</span>Azure AI Search<span class="sep">&middot;</span>Vector &amp; Hybrid Search<span class="sep">&middot;</span>Semantic Ranker<span class="sep">&middot;</span>Azure Functions<span class="sep">&middot;</span>Durable Functions<span class="sep">&middot;</span>Logic Apps<span class="sep">&middot;</span>Cognitive Services</div>
-    </div>
-    <div class="schedule-row">
-      <div class="schedule-mark">03</div>
-      <div class="schedule-cat">AI &amp; Retrieval-Augmented Generation</div>
-      <div class="schedule-items">RAG Architecture<span class="sep">&middot;</span>Vector Databases<span class="sep">&middot;</span>Semantic Search<span class="sep">&middot;</span>Prompt Orchestration<span class="sep">&middot;</span>LLM Integration<span class="sep">&middot;</span>Embedding Models<span class="sep">&middot;</span>Similarity Search</div>
-    </div>
-    <div class="schedule-row">
-      <div class="schedule-mark">04</div>
-      <div class="schedule-cat">Development &amp; Integration</div>
-      <div class="schedule-items">Python<span class="sep">&middot;</span>TypeScript<span class="sep">&middot;</span>JavaScript<span class="sep">&middot;</span>PowerShell<span class="sep">&middot;</span>C#<span class="sep">&middot;</span>React<span class="sep">&middot;</span>SharePoint Framework<span class="sep">&middot;</span>Node.js<span class="sep">&middot;</span>REST APIs<span class="sep">&middot;</span>Azure SDK<span class="sep">&middot;</span>Git<span class="sep">&middot;</span>Azure DevOps<span class="sep">&middot;</span>GitHub</div>
-    </div>
-    <div class="schedule-row">
-      <div class="schedule-mark">05</div>
-      <div class="schedule-cat">Security &amp; Governance</div>
-      <div class="schedule-items">Azure Active Directory<span class="sep">&middot;</span>Managed Identities<span class="sep">&middot;</span>RBAC<span class="sep">&middot;</span>Azure Key Vault<span class="sep">&middot;</span>M365 Compliance<span class="sep">&middot;</span>Data Loss Prevention<span class="sep">&middot;</span>Information Protection<span class="sep">&middot;</span>B2B Governance</div>
-    </div>
-    <div class="schedule-row">
-      <div class="schedule-mark">06</div>
-      <div class="schedule-cat">DevOps &amp; Automation</div>
-      <div class="schedule-items">CI/CD<span class="sep">&middot;</span>Azure DevOps<span class="sep">&middot;</span>GitHub Actions<span class="sep">&middot;</span>ARM Templates<span class="sep">&middot;</span>Bicep<span class="sep">&middot;</span>Azure Runbooks<span class="sep">&middot;</span>PnP PowerShell</div>
+      <div class="schedule-cat">Working with right now</div>
+      <div class="schedule-items">Azure OpenAI<span class="sep">&middot;</span>AI Agents<span class="sep">&middot;</span>Microsoft Agent Framework<span class="sep">&middot;</span>Model Context Protocol (MCP)<span class="sep">&middot;</span>RAG &amp; Azure AI Search<span class="sep">&middot;</span>Salesforce &amp; Clari APIs<span class="sep">&middot;</span>Python<span class="sep">&middot;</span>SharePoint &amp; Microsoft 365</div>
     </div>
   </div>
+  <p class="skills-note">Full skill set — including SharePoint architecture, Power Platform, security &amp; governance, and DevOps — is in the <a href="cv.html">CV</a>.</p>
 </section>
 
 <section class="sheet reveal" id="projects">
@@ -593,6 +572,24 @@ footer {
 
     <div class="project-card" data-mark="P.01">
       <div class="project-head">
+        <h3>Clari &amp; Salesforce Agent</h3>
+        <div class="metric">MCP<small>built from scratch</small></div>
+      </div>
+      <p>An agentic assistant wired into Clari and Salesforce that answers questions across call recordings and CRM data, cross-referencing both. It runs on a manager pattern — one agent plans the approach and delegates, another executes the actual retrieval. Clari doesn't ship an MCP server, so I built one myself with FastMCP on top of Clari's REST API, giving the agent (and anything else that needs it) direct access to Clari data.</p>
+      <div class="tag-row"><span class="tag">Clari REST API</span><span class="tag">Salesforce API</span><span class="tag">FastMCP</span><span class="tag">MCP Server</span><span class="tag">Planner/Executor Agents</span><span class="tag">Azure OpenAI</span></div>
+    </div>
+
+    <div class="project-card" data-mark="P.02">
+      <div class="project-head">
+        <h3>UAT Test Case Generator</h3>
+        <div class="metric">0&#8594;1<small>no uat workbook existed before</small></div>
+      </div>
+      <p>Upload the transcript of a customer call, and a sequential agent (built on Microsoft Agent Framework) picks out the products that came up, searches the knowledge base, drafts the requirements, and generates test cases as a ready-to-use workbook. Bring a new transcript from the same customer next week, and it updates that same workbook instead of starting a fresh one. There's no real UAT documentation handed to customers today, so this closes an actual gap.</p>
+      <div class="tag-row"><span class="tag">Microsoft Agent Framework</span><span class="tag">Sequential Agents</span><span class="tag">Azure OpenAI</span><span class="tag">Azure AI Search</span><span class="tag">Python</span></div>
+    </div>
+
+    <div class="project-card" data-mark="P.03">
+      <div class="project-head">
         <h3>Product Intelligence Platform</h3>
         <div class="metric">60<small>% faster discovery</small></div>
       </div>
@@ -600,7 +597,7 @@ footer {
       <div class="tag-row"><span class="tag">Azure OpenAI</span><span class="tag">Azure AI Search</span><span class="tag">Python</span><span class="tag">Azure Functions</span><span class="tag">Graph API</span></div>
     </div>
 
-    <div class="project-card" data-mark="P.02">
+    <div class="project-card" data-mark="P.04">
       <div class="project-head">
         <h3>HR Helper Buddy</h3>
         <div class="metric">45<small>% faster resolution</small></div>
@@ -609,7 +606,7 @@ footer {
       <div class="tag-row"><span class="tag">Azure OpenAI</span><span class="tag">Azure AI Search</span><span class="tag">SharePoint Online</span><span class="tag">Azure Functions</span></div>
     </div>
 
-    <div class="project-card" data-mark="P.03">
+    <div class="project-card" data-mark="P.05">
       <div class="project-head">
         <h3>Customer Service Intelligence Platform</h3>
         <div class="metric">35<small>% faster case time</small></div>
@@ -618,7 +615,7 @@ footer {
       <div class="tag-row"><span class="tag">Azure OpenAI</span><span class="tag">Azure AI Search</span><span class="tag">Salesforce API</span><span class="tag">Python</span><span class="tag">Azure Functions</span></div>
     </div>
 
-    <div class="project-card" data-mark="P.04">
+    <div class="project-card" data-mark="P.06">
       <div class="project-head">
         <h3>Implementation Blueprint Generator</h3>
         <div class="metric">70<small>% less doc time</small></div>
@@ -627,7 +624,7 @@ footer {
       <div class="tag-row"><span class="tag">Azure OpenAI GPT‑4</span><span class="tag">Azure AI Search</span><span class="tag">SharePoint Online</span><span class="tag">Python</span></div>
     </div>
 
-    <div class="project-card" data-mark="P.05">
+    <div class="project-card" data-mark="P.07">
       <div class="project-head">
         <h3>AI-Assisted Duplicate Case Detection</h3>
         <div class="metric">85<small>% match accuracy</small></div>
